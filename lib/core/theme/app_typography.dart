@@ -84,7 +84,7 @@ class AppTypography {
     fontWeight: FontWeight.w400,
     height: 1.38,
     letterSpacing: -0.08,
-    color: AppColors.textSecondary,
+    color: AppColors.textTertiary,
   );
 
   static const TextStyle caption1 = TextStyle(
