@@ -6,6 +6,7 @@ import '../../../core/theme/app_spacing.dart';
 import '../../../core/widgets/glass_card.dart';
 import '../../../core/widgets/primary_button.dart';
 import '../../../core/widgets/secondary_button.dart';
+import '../../../core/widgets/app_background.dart';
 import '../../providers/vault_providers.dart';
 import '../home/home_screen.dart';
 
@@ -98,18 +99,7 @@ class _VaultUnlockScreenState extends ConsumerState<VaultUnlockScreen> {
     final vaultState = ref.watch(vaultNotifierProvider);
 
     return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              AppColors.backgroundPrimary,
-              AppColors.darkGray,
-              AppColors.backgroundPrimary,
-            ],
-          ),
-        ),
+      body: AppBackground(
         child: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(AppSpacing.pagePadding),

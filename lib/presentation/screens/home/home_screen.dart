@@ -6,6 +6,7 @@ import '../../../core/theme/app_typography.dart';
 import '../../../core/theme/app_spacing.dart';
 import '../../../core/widgets/glass_card.dart';
 import '../../../core/widgets/primary_button.dart';
+import '../../../core/widgets/app_background.dart';
 import '../../../domain/entities/vault_entry.dart';
 import '../../../domain/entities/entry_type.dart';
 import '../../providers/vault_providers.dart';
@@ -21,17 +22,7 @@ class HomeScreen extends ConsumerWidget {
     final entriesAsync = ref.watch(entriesProvider);
 
     return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              AppColors.backgroundPrimary,
-              AppColors.backgroundSecondary,
-            ],
-          ),
-        ),
+      body: AppBackground(
         child: SafeArea(
           child: CustomScrollView(
             slivers: [

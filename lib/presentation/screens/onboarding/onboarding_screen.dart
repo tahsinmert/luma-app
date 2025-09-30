@@ -5,6 +5,7 @@ import '../../../core/theme/app_typography.dart';
 import '../../../core/theme/app_spacing.dart';
 import '../../../core/widgets/glass_card.dart';
 import '../../../core/widgets/primary_button.dart';
+import '../../../core/widgets/app_background.dart';
 import '../vault_unlock/vault_unlock_screen.dart';
 
 class OnboardingScreen extends ConsumerStatefulWidget {
@@ -48,18 +49,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              AppColors.backgroundPrimary,
-              AppColors.darkGray,
-              AppColors.backgroundPrimary,
-            ],
-          ),
-        ),
+      body: AppBackground(
         child: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(AppSpacing.pagePadding),

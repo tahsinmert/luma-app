@@ -4,6 +4,7 @@ import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_typography.dart';
 import '../../../core/theme/app_spacing.dart';
 import '../../../core/widgets/glass_card.dart';
+import '../../../core/widgets/app_background.dart';
 import '../../../domain/entities/entry_type.dart';
 import '../../providers/vault_providers.dart';
 import '../entry_detail/entry_detail_screen.dart';
@@ -31,7 +32,6 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
     final searchResults = ref.watch(searchResultsProvider);
 
     return Scaffold(
-      backgroundColor: AppColors.backgroundPrimary,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -41,7 +41,8 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
         ),
         title: Text('Search', style: AppTypography.title2),
       ),
-      body: SafeArea(
+      body: AppBackground(
+        child: SafeArea(
         child: Column(
           children: [
             // Search field
@@ -234,6 +235,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
               ),
             ),
           ],
+        ),
         ),
       ),
     );

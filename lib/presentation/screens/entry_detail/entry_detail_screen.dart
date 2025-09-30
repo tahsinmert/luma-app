@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_typography.dart';
 import '../../../core/theme/app_spacing.dart';
+import '../../../core/widgets/app_background.dart';
 import '../../../domain/entities/vault_entry.dart';
 import '../../providers/vault_providers.dart';
 import 'package:intl/intl.dart';
@@ -83,7 +84,6 @@ class _EntryDetailScreenState extends ConsumerState<EntryDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.backgroundPrimary,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -116,7 +116,8 @@ class _EntryDetailScreenState extends ConsumerState<EntryDetailScreen> {
             ),
         ],
       ),
-      body: SafeArea(
+      body: AppBackground(
+        child: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(AppSpacing.pagePadding),
           child: Column(
@@ -188,6 +189,7 @@ class _EntryDetailScreenState extends ConsumerState<EntryDetailScreen> {
               ),
             ],
           ),
+        ),
         ),
       ),
     );
