@@ -29,16 +29,8 @@ class PrimaryButton extends StatelessWidget {
       height: 56,
       child: DecoratedBox(
         decoration: BoxDecoration(
-          gradient: useGradient ? AppColors.primaryGradient : null,
-          color: useGradient ? null : AppColors.primaryBlue,
-          borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
-          boxShadow: [
-            BoxShadow(
-              color: AppColors.primaryBlue.withOpacity(0.3),
-              blurRadius: 16,
-              offset: const Offset(0, 8),
-            ),
-          ],
+          color: AppColors.primaryBlue,
+          borderRadius: BorderRadius.circular(14),
         ),
         child: ElevatedButton(
           onPressed: isLoading
@@ -51,7 +43,7 @@ class PrimaryButton extends StatelessWidget {
             backgroundColor: Colors.transparent,
             shadowColor: Colors.transparent,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
+              borderRadius: BorderRadius.circular(14),
             ),
           ),
           child: isLoading
@@ -74,7 +66,7 @@ class PrimaryButton extends StatelessWidget {
                     Text(
                       label,
                       style: AppTypography.headline.copyWith(
-                        color: AppColors.textPrimary,
+                        color: Colors.white,
                       ),
                     ),
                   ],

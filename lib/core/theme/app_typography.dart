@@ -8,16 +8,16 @@ class AppTypography {
   static const String fontFamilyText = 'SF Pro Text';
   static const TextStyle largeTitle = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 34,
+    fontSize: 32,
     fontWeight: FontWeight.w700,
-    height: 1.2,
+    height: 1.18,
     letterSpacing: 0.37,
     color: AppColors.textPrimary,
   );
 
   static const TextStyle title1 = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 28,
+    fontSize: 26,
     fontWeight: FontWeight.w600,
     height: 1.25,
     letterSpacing: 0.36,
@@ -26,7 +26,7 @@ class AppTypography {
 
   static const TextStyle title2 = TextStyle(
     fontFamily: fontFamily,
-    fontSize: 22,
+    fontSize: 20,
     fontWeight: FontWeight.w600,
     height: 1.28,
     letterSpacing: 0.35,
@@ -35,9 +35,9 @@ class AppTypography {
 
   static const TextStyle title3 = TextStyle(
     fontFamily: fontFamilyText,
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: FontWeight.w600,
-    height: 1.3,
+    height: 1.26,
     letterSpacing: 0.38,
     color: AppColors.textPrimary,
   );
@@ -46,7 +46,7 @@ class AppTypography {
     fontFamily: fontFamilyText,
     fontSize: 17,
     fontWeight: FontWeight.w600,
-    height: 1.35,
+    height: 1.32,
     letterSpacing: -0.41,
     color: AppColors.textPrimary,
   );

@@ -30,9 +30,9 @@ class SecondaryButton extends StatelessWidget {
         },
         style: OutlinedButton.styleFrom(
           backgroundColor: AppColors.glassBackground,
-          side: const BorderSide(color: AppColors.glassBorder),
+          side: const BorderSide(color: AppColors.glassBorder, width: 0.75),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
+            borderRadius: BorderRadius.circular(14),
           ),
         ),
         child: Row(
