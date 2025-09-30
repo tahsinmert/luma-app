@@ -6,7 +6,6 @@ import '../../domain/repositories/vault_repository.dart';
 import '../database/app_database.dart';
 import '../services/encryption_service.dart';
 
-/// Implementation of VaultRepository with encryption
 class VaultRepositoryImpl implements VaultRepository {
   final AppDatabase _database;
   final EncryptionService _encryptionService;
@@ -31,7 +30,6 @@ class VaultRepositoryImpl implements VaultRepository {
     try {
       await _encryptionService.initialize(passphrase);
       
-      // Test decryption with a sample entry
       final entries = await _database.getAllEntries();
       if (entries.isNotEmpty) {
         _encryptionService.decryptData(entries.first.content);
@@ -128,7 +126,6 @@ class VaultRepositoryImpl implements VaultRepository {
   Future<List<VaultEntry>> searchEntries(String query) async {
     _ensureUnlocked();
     
-    // Get all entries and decrypt for search (in production, consider FTS5)
     final allEntries = await getAllEntries();
     final lowercaseQuery = query.toLowerCase();
     
@@ -143,13 +140,11 @@ class VaultRepositoryImpl implements VaultRepository {
   @override
   Future<String> exportBackup() async {
     _ensureUnlocked();
-    // Implementation would create encrypted backup file
     throw UnimplementedError('Backup export not yet implemented');
   }
 
   @override
   Future<void> importBackup(String backupPath, String passphrase) async {
-    // Implementation would restore from encrypted backup
     throw UnimplementedError('Backup import not yet implemented');
   }
 

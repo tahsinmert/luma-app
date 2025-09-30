@@ -6,7 +6,6 @@ import 'package:path/path.dart' as p;
 
 part 'app_database.g.dart';
 
-/// Database table for vault entries
 class Entries extends Table {
   TextColumn get id => text()();
   IntColumn get type => integer()();
@@ -24,7 +23,6 @@ class Entries extends Table {
   Set<Column> get primaryKey => {id};
 }
 
-/// Drift database for encrypted local storage
 @DriftDatabase(tables: [Entries])
 class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(_openConnection());
@@ -32,7 +30,6 @@ class AppDatabase extends _$AppDatabase {
   @override
   int get schemaVersion => 1;
 
-  // Entry operations
   Future<List<Entry>> getAllEntries() => select(entries).get();
 
   Future<List<Entry>> getEntriesByType(int type) =>

@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'app_colors.dart';
 
-/// SF Pro-inspired typography system with large, editorial type
 class AppTypography {
   AppTypography._();
 
-  // Font Family (use SF Pro or system default)
   static const String fontFamily = 'SF Pro Display';
   static const String fontFamilyText = 'SF Pro Text';
-
-  // Large Title - Hero headlines
   static const TextStyle largeTitle = TextStyle(
     fontFamily: fontFamily,
     fontSize: 34,

@@ -1,4 +1,3 @@
-/// Entry types in the vault
 enum EntryType {
   journal,
   voice,

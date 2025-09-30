@@ -9,7 +9,6 @@ import 'presentation/providers/vault_providers.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   
-  // Set system UI overlay style
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarBrightness: Brightness.dark,
@@ -38,7 +37,6 @@ class WhisperJournalApp extends ConsumerWidget {
   }
 }
 
-/// Splash screen that determines initial route
 class SplashScreen extends ConsumerStatefulWidget {
   const SplashScreen({super.key});
 
@@ -54,26 +52,22 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
   }
 
   Future<void> _initialize() async {
-    // Wait a moment for smooth transition
     await Future.delayed(const Duration(milliseconds: 500));
 
     if (!mounted) return;
 
-    // Check if vault exists
     final vaultNotifier = ref.read(vaultNotifierProvider.notifier);
     final vaultExists = await vaultNotifier.checkVaultExists();
 
     if (!mounted) return;
 
     if (vaultExists) {
-      // Navigate to unlock screen
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (_) => const VaultUnlockScreen(),
         ),
       );
     } else {
-      // Navigate to onboarding
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (_) => const OnboardingScreen(),

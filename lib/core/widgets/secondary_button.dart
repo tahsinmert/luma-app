@@ -4,7 +4,6 @@ import '../theme/app_colors.dart';
 import '../theme/app_typography.dart';
 import '../theme/app_spacing.dart';
 
-/// Secondary button with glass effect
 class SecondaryButton extends StatelessWidget {
   final String label;
   final VoidCallback onPressed;

@@ -4,7 +4,6 @@ import '../theme/app_colors.dart';
 import '../theme/app_typography.dart';
 import '../theme/app_spacing.dart';
 
-/// Primary CTA button with haptic feedback
 class PrimaryButton extends StatelessWidget {
   final String label;
   final VoidCallback onPressed;

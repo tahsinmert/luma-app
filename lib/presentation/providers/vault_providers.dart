@@ -6,7 +6,6 @@ import '../../data/repositories/vault_repository_impl.dart';
 import '../../domain/repositories/vault_repository.dart';
 import '../../domain/entities/vault_entry.dart';
 
-// Core services
 final databaseProvider = Provider<AppDatabase>((ref) {
   return AppDatabase();
 });
@@ -19,14 +18,12 @@ final biometricServiceProvider = Provider<BiometricService>((ref) {
   return BiometricService();
 });
 
-// Repository
 final vaultRepositoryProvider = Provider<VaultRepository>((ref) {
   final database = ref.watch(databaseProvider);
   final encryption = ref.watch(encryptionServiceProvider);
   return VaultRepositoryImpl(database, encryption);
 });
 
-// Vault state
 class VaultState {
   final bool isUnlocked;
   final bool isLoading;
@@ -51,7 +48,6 @@ class VaultState {
   }
 }
 
-// Vault state notifier
 class VaultNotifier extends StateNotifier<VaultState> {
   final VaultRepository _repository;
   final BiometricService _biometricService;
@@ -133,13 +129,11 @@ final vaultNotifierProvider =
   return VaultNotifier(repository, biometric);
 });
 
-// Entries provider
 final entriesProvider = FutureProvider<List<VaultEntry>>((ref) async {
   final repository = ref.watch(vaultRepositoryProvider);
   return await repository.getAllEntries();
 });
 
-// Search provider
 final searchQueryProvider = StateProvider<String>((ref) => '');
 
 final searchResultsProvider = FutureProvider<List<VaultEntry>>((ref) async {

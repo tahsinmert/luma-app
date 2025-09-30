@@ -1,6 +1,5 @@
 import 'entry_type.dart';
 
-/// Base entity for all vault entries
 class VaultEntry {
   final String id;
   final EntryType type;
