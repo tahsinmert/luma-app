@@ -74,7 +74,7 @@ class PrimaryButton extends StatelessWidget {
                     Text(
                       label,
                       style: AppTypography.headline.copyWith(
-                        color: Colors.white,
+                        color: AppColors.textPrimary,
                       ),
                     ),
                   ],

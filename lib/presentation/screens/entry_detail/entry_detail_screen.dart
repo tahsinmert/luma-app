@@ -100,7 +100,7 @@ class _EntryDetailScreenState extends ConsumerState<EntryDetailScreen> {
                 height: 20,
                 child: CircularProgressIndicator(
                   strokeWidth: 2,
-                  valueColor: AlwaysStoppedAnimation(AppColors.primaryBlue),
+                  valueColor: AlwaysStoppedAnimation(AppColors.textPrimary),
                 ),
               ),
             )

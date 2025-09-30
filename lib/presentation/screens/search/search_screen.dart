@@ -223,7 +223,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
                 },
                 loading: () => const Center(
                   child: CircularProgressIndicator(
-                    valueColor: AlwaysStoppedAnimation(AppColors.primaryBlue),
+                    valueColor: AlwaysStoppedAnimation(AppColors.textPrimary),
                   ),
                 ),
                 error: (error, stack) => Center(

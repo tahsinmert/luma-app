@@ -179,7 +179,7 @@ class _VaultUnlockScreenState extends ConsumerState<VaultUnlockScreen> {
                 
                 if (!_showPassphraseInput && !widget.isCreating) ...[
                   const CircularProgressIndicator(
-                    valueColor: AlwaysStoppedAnimation(AppColors.primaryBlue),
+                    valueColor: AlwaysStoppedAnimation(AppColors.textPrimary),
                   ),
                   const SizedBox(height: AppSpacing.lg),
                   SecondaryButton(

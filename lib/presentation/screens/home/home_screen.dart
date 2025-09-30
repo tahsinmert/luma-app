@@ -134,7 +134,7 @@ class HomeScreen extends ConsumerWidget {
                 loading: () => const SliverFillRemaining(
                   child: Center(
                     child: CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation(AppColors.primaryBlue),
+                      valueColor: AlwaysStoppedAnimation(AppColors.textPrimary),
                     ),
                   ),
                 ),
