@@ -60,7 +60,7 @@ class PrimaryButton extends StatelessWidget {
                   height: 24,
                   child: CircularProgressIndicator(
                     strokeWidth: 2,
-                    valueColor: AlwaysStoppedAnimation(AppColors.textPrimary),
+                    valueColor: AlwaysStoppedAnimation(Colors.white),
                   ),
                 )
               : Row(
@@ -74,7 +74,7 @@ class PrimaryButton extends StatelessWidget {
                     Text(
                       label,
                       style: AppTypography.headline.copyWith(
-                        color: AppColors.textPrimary,
+                        color: Colors.white,
                       ),
                     ),
                   ],

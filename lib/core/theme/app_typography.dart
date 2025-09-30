@@ -15,7 +15,6 @@ class AppTypography {
     color: AppColors.textPrimary,
   );
 
-  // Title 1 - Section headers
   static const TextStyle title1 = TextStyle(
     fontFamily: fontFamily,
     fontSize: 28,
@@ -25,7 +24,6 @@ class AppTypography {
     color: AppColors.textPrimary,
   );
 
-  // Title 2 - Card headers
   static const TextStyle title2 = TextStyle(
     fontFamily: fontFamily,
     fontSize: 22,
@@ -35,7 +33,6 @@ class AppTypography {
     color: AppColors.textPrimary,
   );
 
-  // Title 3 - Subsection headers
   static const TextStyle title3 = TextStyle(
     fontFamily: fontFamilyText,
     fontSize: 20,
@@ -45,7 +42,6 @@ class AppTypography {
     color: AppColors.textPrimary,
   );
 
-  // Headline
   static const TextStyle headline = TextStyle(
     fontFamily: fontFamilyText,
     fontSize: 17,
@@ -55,7 +51,6 @@ class AppTypography {
     color: AppColors.textPrimary,
   );
 
-  // Body - Primary reading text
   static const TextStyle body = TextStyle(
     fontFamily: fontFamilyText,
     fontSize: 17,
@@ -65,7 +60,6 @@ class AppTypography {
     color: AppColors.textPrimary,
   );
 
-  // Callout
   static const TextStyle callout = TextStyle(
     fontFamily: fontFamilyText,
     fontSize: 16,
@@ -75,7 +69,6 @@ class AppTypography {
     color: AppColors.textPrimary,
   );
 
-  // Subheadline
   static const TextStyle subheadline = TextStyle(
     fontFamily: fontFamilyText,
     fontSize: 15,
@@ -85,17 +78,15 @@ class AppTypography {
     color: AppColors.textSecondary,
   );
 
-  // Footnote - Captions and metadata
   static const TextStyle footnote = TextStyle(
     fontFamily: fontFamilyText,
     fontSize: 13,
     fontWeight: FontWeight.w400,
     height: 1.38,
     letterSpacing: -0.08,
-    color: AppColors.textTertiary,
+    color: AppColors.textSecondary,
   );
 
-  // Caption 1
   static const TextStyle caption1 = TextStyle(
     fontFamily: fontFamilyText,
     fontSize: 12,
@@ -105,7 +96,6 @@ class AppTypography {
     color: AppColors.textTertiary,
   );
 
-  // Caption 2
   static const TextStyle caption2 = TextStyle(
     fontFamily: fontFamilyText,
     fontSize: 11,

@@ -6,29 +6,27 @@ import 'app_typography.dart';
 class AppTheme {
   AppTheme._();
 
-  static ThemeData get darkTheme {
+  static ThemeData get lightTheme {
     return ThemeData(
-      brightness: Brightness.dark,
+      brightness: Brightness.light,
       scaffoldBackgroundColor: AppColors.backgroundPrimary,
       primaryColor: AppColors.primaryBlue,
       
-      // Color scheme
-      colorScheme: const ColorScheme.dark(
+      colorScheme: const ColorScheme.light(
         primary: AppColors.primaryBlue,
         secondary: AppColors.primaryPurple,
         surface: AppColors.backgroundSecondary,
         error: AppColors.error,
       ),
       
-      // App bar theme
       appBarTheme: const AppBarTheme(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        systemOverlayStyle: SystemUiOverlayStyle.light,
+        systemOverlayStyle: SystemUiOverlayStyle.dark,
         iconTheme: IconThemeData(color: AppColors.textPrimary),
+        titleTextStyle: AppTypography.title2,
       ),
       
-      // Text theme
       textTheme: const TextTheme(
         displayLarge: AppTypography.largeTitle,
         displayMedium: AppTypography.title1,
@@ -43,10 +41,10 @@ class AppTheme {
         labelSmall: AppTypography.caption1,
       ),
       
-      // Input decoration
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: AppColors.backgroundTertiary,
+        hintStyle: AppTypography.body.copyWith(color: AppColors.textTertiary),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none,
@@ -57,11 +55,10 @@ class AppTheme {
         ),
       ),
       
-      // Elevated button
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.primaryBlue,
-          foregroundColor: AppColors.textPrimary,
+          foregroundColor: Colors.white,
           elevation: 0,
           padding: const EdgeInsets.symmetric(
             horizontal: 24,

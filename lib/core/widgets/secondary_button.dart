@@ -40,13 +40,13 @@ class SecondaryButton extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             if (icon != null) ...[
-              Icon(icon, size: 20, color: AppColors.textPrimary),
+              Icon(icon, size: 20, color: AppColors.primaryBlue),
               const SizedBox(width: AppSpacing.xs),
             ],
             Text(
               label,
               style: AppTypography.headline.copyWith(
-                color: AppColors.textPrimary,
+                color: AppColors.primaryBlue,
               ),
             ),
           ],
